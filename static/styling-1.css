@@ -1,0 +1,199 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(background.jpg);
+    text-align: center;
+}
+
+p {
+    font-size: 25px; 
+   }
+
+/* Nav bar */
+
+.Container{
+    margin-top: 0px;
+    background-color: rgb(8, 18, 125);
+    height: 60px;
+    grid-area: Container;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li{
+    margin-top: 20px;
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+    text-transform: uppercase;
+    padding: 5px 15px;
+}
+
+a:is(:link, :active, :visited).active {
+    color: rgb(122, 34, 101);
+    background-color: rgb(198, 197, 128);
+}
+/* boby */
+
+#header{
+    animation: rainbow 4s  5 ;
+    text-underline-position: blue;
+    font-size: 50px;   
+    height: 30px;
+    grid-area: Header;
+    padding: 10px;
+}
+
+@keyframes rainbow {
+    0% {color: rgb(57, 41, 110);}
+    16%{color: rgb(65, 185, 194);}
+    33% {color: rgb(8, 8, 151);}
+    50%{color: rgb(7, 7, 173);}
+    66% {color: rgb(76, 74, 222);}
+    83%{color: rgb(41, 7, 141);}
+    100%{color: rgb(16, 134, 181);}
+
+}
+
+.headline{
+    font-size: 70px;
+    color: rgb(66, 66, 215); 
+
+}
+
+#typeWriter{
+    box-sizing: border-box;
+    font-size: 25px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 0;}
+    33% {opacity: 0.5;}
+    66% {opacity: 1;}
+}
+
+
+/* SIGN UP PAGE */
+
+#signup{
+    color: rgb(16, 16, 161);
+    font-size: 50px;   
+    height: 30px;
+    grid-area: signup;
+    padding: 10px;
+  }
+
+
+  .submit{
+      font-size: 30px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      cursor: pointer;
+      color: rgb(1, 1, 57);
+      animation: blink 2s infinite;
+  
+  }
+  #birthday{
+    width: 160px;
+  }
+
+/* Grid */
+.leftside{
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    grid-area: LeftSide;
+  }
+  
+  .rightside{
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    grid-area: RightSide;
+  }
+  
+  
+  #bodycontactpage{
+    grid-template-areas: 'Nav1'
+    'Header'
+    'signup'
+    'LeftSide RightSide'
+    'Center' ; 
+}
+
+@media only screen and (max-width: 600px) {
+    #bodycontactpage {
+        font-size: 12px;
+        grid-template-columns: 'Nav1'
+        'Header'
+        'signup'
+        'LeftSide' 
+        'RightSide'
+        'Center' ;
+  
+    }
+  }
+
+  /* FAQ */
+
+  
+.FAQ-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+    font-size: 40px;
+    color: rgb(13, 32, 141);
+}
+
+#FAQimage{
+  width: 200px;
+}
+
+  .questions {
+    background-color:rgb(198, 197, 128);
+    color: rgb(13, 32, 141);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 40px;
+  }
+  
+  /* Add a background color to the button if it is clicked on */
+.active, .questions:hover {
+    background-color: rgb(75, 85, 146);
+  }
+
+  .answers {
+    padding: 0 18px;
+    background-image: url(../static/background.jpg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 25px;
+    
+  }
+
+  .questions:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+

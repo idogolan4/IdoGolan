@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styling-1.css">
+    <script defer src="../static/Function-1.js"></script>
+    <title>IdoGolanOfficeMainPage</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="navbar">
+            <nav>
+              <ul>
+                <li><a href="FirstPage-1.HTML">Home</a></li>
+                <li><a href="ContactPage-1.html">Contact Us</a></li>
+                <li><a href="FAQ-1.HTML">FAQ</a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>   
+<h1 id="header">Ido Golan Office</h1>
+<div class="headline">Hello, Welcome to my Website</div><br>
+<img src="../static/office.jpg" alt="OfficePicture"><br>
+
+<script>
+    var i = 0;
+    var txt = 'This is the best office website you will ever visit, Welcome !!';
+    var speed = 50;  
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    </script>
+<button onclick="typeWriter()" id="typeWriter">Click Here Please </button>
+<p id="demo"></p>
+</body>
+</html>
